@@ -134,6 +134,7 @@ p + p {
   line-height: 1.4;
 }
 .heading-four {
+  text-align: center;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.3;
@@ -552,24 +553,26 @@ header #nav-check {
  About section styles
 ----------------------------------------*/
 .home__about-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  display: flex;
+  margin: auto;
+  text-align:justify ;
+  /* grid-template-columns: repeat(2, 1fr); Two columns */
   gap: 24px;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.home__about-section__content {
+/* .home__about-section__content {
   max-width: 500px;
   align-self: center;
 }
 .home__about-section__content__body {
   margin-bottom: 24px;
-}
-.home__about-section__img {
+} */
+/* .home__about-section__img {
   width: 100%;
   height: auto;
   border-radius: 15px;
-}
+} */
 
 /*----------------------------------------
  Contact section styles
@@ -935,9 +938,12 @@ header #nav-check {
   About section styles
   ----------------------------------------*/
   .home__about-section {
-    display: grid;
-    grid-template-columns: auto; /* Two columns */
-    gap: 64px;
+    display: flex;
+    /* grid-template-columns: auto; Two columns */
+    /* gap: 64px; */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     padding-top: 64px;
     padding-bottom: 64px;
   }
