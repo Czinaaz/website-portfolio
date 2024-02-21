@@ -1,6 +1,6 @@
 # My Portfolio
 
-![Portfolio Preview](images/portfolio-preview.png)
+Portfolio: [czinaaz.portfolio](https://czinaaz.github.io/website-portfolio/)
 
 ## Description
 
@@ -32,6 +32,6 @@ Ivan Rudenko
 
 Contact: rudenko.ivan81@gmail.com
 
-Portfolio: [czinaaz.portfolio](https://czinaaz.github.io/website-portfolio/)
+
 
 
