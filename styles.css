@@ -5,8 +5,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #3838388f;
-  color: var(--primary-color);
+  background-color:  #b77ae9;
+  color: rgb(32, 32, 32);
   width: 50px;
   height: 50px;
   border: none;
@@ -22,22 +22,103 @@
   display: block;
 }
 
+.mode-switcher button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
 /* Dark - Lite mode */
 
-/* body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-} */
+.light-mode {
+  background-color: white;
+  color: black;
+}
 
-/* Tryb ciemny */
-/* body.dark-mode {
+.light-mode {
+  --primary-color: #b77ae9;
+  --neutral-black: #272727;
+  --neutral-light-black: #c7c7c7;
+  --neutral-dark-gray: #ffffff;
+  --neutral-gray: #191919;
+  --neutral-light-gray: #484848;
+  --neutral-white: #b77ae9;
+  --neutral-offwhite: #444444;
+  --error-red: #e74c3c;
+  --success-green: #2ecc71;
+  --header-color: #1f1f1f;
+  --buttonmain:#ffffff;
+  --navlink:#000000;
+  --buttonsocial-light:#b77ae9;
+  --buttonsocial-dark:#8d8d8d;
+  --buttonfill:hsl(276, 7%, 15%);
+}
+
+.mode-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: none; /* Ukryj standardowy checkbox */
+}
+
+.mode-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.mode-switch-label .fa-sun, 
+.mode-switch-label .fa-moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+
+.mode-switch-label .fa-sun {
+  left: 8px;
+  opacity: 1;
+  color: #000000;
+}
+
+.mode-switch-label .fa-moon {
+  right: 8px;
+  opacity: 0;
+}
+
+.switch:checked + .mode-switch-label {
+  background-color: var(--primary-color);
+}
+
+.switch:checked + .mode-switch-label .fa-sun {
+  opacity: 0;
+}
+
+.switch:checked + .mode-switch-label .fa-moon {
+  opacity: 1;
+}
+
+
+Tryb ciemny
+body.dark-mode {
   background-color: var(--neutral-black);
   color: var(--neutral-white);
-} */
+}
 
 
 /* Define custom color variables */
 :root {
+  --header-color: #ffffff;
   --primary-color: #b77ae9;
   --neutral-black: #0a0a0a;
   --neutral-light-black: #1a1a1a;
@@ -48,6 +129,11 @@
   --neutral-offwhite: #c7c7c7;
   --error-red: #e74c3c;
   --success-green: #2ecc71;
+  --buttonmain:#212121;
+  --navlink:#ffffff;
+  --buttonsocial-light:#757575;
+  --buttonsocial-dark:#212121;
+  --buttonfill:#b77ae9;
 }
 
 /* makes sizing simpler */
@@ -209,7 +295,7 @@ p + p {
   content: "";
   display: block;
   position: absolute;
-  background: var(--neutral-black);
+  background: var(--buttonmain);
   width: 10px;
   height: 10px;
   border-radius: 100px;
@@ -245,8 +331,8 @@ p + p {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  color: var(--primary-color);
-  background-color: var(--neutral-dark-gray);
+  color: var(--buttonfill);
+  background-color: var(--buttonsocial-dark);
   font-size: 26px;
   transition: background-color 0.2s ease;
   text-decoration: none;
@@ -254,7 +340,7 @@ p + p {
 
 /* Styles for the social icon on hover */
 .btn-social:hover {
-  background-color: var(--neutral-gray);
+  background-color: var(--buttonsocial-light);
 }
 
 .social-icons {
@@ -340,11 +426,11 @@ header .nav-links nav {
 /* Styles for individual navigation links */
 header .nav-links a {
   text-decoration: none;
-  color: var(--neutral-white);
+  color: var(--navlink);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% / 24px */
-  opacity: 0.4;
+  opacity: 0.5;
   transition: opacity 0.15s ease;
 }
 
@@ -413,7 +499,7 @@ header #nav-check {
 
 .hero__img {
   border-radius: 16px;
-  width: 100%;
+  width: 80%;
   height: auto;
   flex-shrink: 0;
   object-fit: cover;
