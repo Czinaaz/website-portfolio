@@ -55,6 +55,8 @@
   --buttonsocial-light:#b77ae9;
   --buttonsocial-dark:#8d8d8d;
   --buttonfill:hsl(276, 7%, 15%);
+  --project-color-one: #b77ae9;
+  --project-color-two:#ffffff;
 }
 
 .mode-switcher {
@@ -136,6 +138,8 @@ body.dark-mode {
   --buttonsocial-light:#757575;
   --buttonsocial-dark:#212121;
   --buttonfill:#b77ae9;
+  --project-color-one: #000000;
+  --project-color-two:#ffffff;
 }
 
 /* makes sizing simpler */
@@ -505,6 +509,7 @@ header #nav-check {
   height: auto;
   flex-shrink: 0;
   object-fit: cover;
+  margin: auto;
 }
 
 /* Styles for the contact button */
@@ -560,8 +565,8 @@ header #nav-check {
   line-height: 1.5;
   padding: 8px 16px;
   border-radius: 100px;
-  color: var(--neutral-white);
-  background: var(--neutral-black);
+  color: var(--project-color-two);
+  background: var(--project-color-one);
   top: 16px;
   left: 16px;
 }
@@ -1063,5 +1068,10 @@ header #nav-check {
   .form__control i {
     font-size: 24px;
     top: 44px;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
   }
 }
