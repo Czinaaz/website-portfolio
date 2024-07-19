@@ -1,6 +1,10 @@
 /* Import the Bebas+Neue and Inter fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap");
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .scroll-up-btn {
   position: fixed;
   bottom: 20px;
@@ -15,7 +19,7 @@
   font-weight: 900;
   cursor: pointer;
   display: none;
-  z-index: 9999;
+  z-index: 100;
 }
 
 .scroll-up-btn.show {
@@ -34,7 +38,7 @@
 /* Dark - Lite mode */
 
 .light-mode {
-  background-color: white;
+  background-color: #ffffff;
   color: black;
 }
 
@@ -94,6 +98,7 @@
 .mode-switch-btn .fa-moon {
   right: 8px;
   opacity: 0;
+  color: #000000;
 }
 
 body.dark-mode .mode-switch-btn {
@@ -405,7 +410,7 @@ header {
   padding: 24px 60px;
   justify-content: space-between;
   align-items: center;
-  z-index: 99;
+  z-index: 999;
 }
 
 /* Styles for the navigation title in the header */
@@ -415,7 +420,7 @@ header .nav-title {
   font-size: 32px;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  z-index: 2;
+  z-index: 999;
 }
 
 /* Styles for the navigation title button (burger menu) */
@@ -887,7 +892,7 @@ header #nav-check {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--neutral-black);
+    /* background-color: var(--neutral-black); */
   }
 
   /* Adjust position of nav-title for smaller screens */
@@ -922,10 +927,13 @@ header #nav-check {
     transform: translate(-50%, -6px);
     background-color: var(--neutral-offwhite);
     transition: 0.3s;
+    z-index: 9999;
   }
   header .nav-btn label span + span {
     transform: translate(-50%, 6px);
   }
+
+  
 
   /* ------------------ Recheck ------------------------------------------- */
   /* Styles for the navigation links container */

@@ -17,41 +17,31 @@
   <body>
     <button id="scrollUpBtn" class="scroll-up-btn"><i class="fas fa-arrow-up"></i></button>
 <!-- Header -->
-    <header>
-
-      <input type="checkbox" id="nav-check" />
-
-      <div class="nav-header">
-
-        <div class="nav-title">Ivan Rudenko</div>
-      </div>
-
-      <div class="mode-switcher">
-        <button id="mode-switch" class="mode-switch-btn">
+<header>
+  <input type="checkbox" id="nav-check" />
+  <div class="nav-header">
+      <div class="nav-title">Ivan Rudenko</div>
+  </div>
+  <div class="mode-switcher">
+      <button id="mode-switch" class="mode-switch-btn">
           <i class="fas fa-sun"></i>
           <i class="fas fa-moon"></i>
-        </button>
-      </div>
-
-      <div class="nav-links">
-
-        <nav>
-          <a href="#projects" > Work</a>  <!--class="active"-->
-          <a href="#about"> About</a>
-          <a href="#contact"> Contact</a>
-        </nav>
-
-      </div>
-      <!-- Container for navigation button (burger menu) -->
-      <div class="nav-btn">
-        <!-- label associated with the checkbox for toggling the navigation -->
-        <label for="nav-check">
-          <!-- Span elements representing the burger menu lines-->
+      </button>
+  </div>
+  <div class="nav-links">
+      <nav>
+          <a href="#projects">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+      </nav>
+  </div>
+  <div class="nav-btn">
+      <label for="nav-check">
           <span></span>
           <span></span>
-        </label>
-      </div>
-    </header>
+      </label>
+  </div>
+</header>
 
     <div class="divider"></div>
     <!-- Main content section -->
@@ -634,11 +624,39 @@
         scrollUpBtn.addEventListener('click', function() {
           window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Jeśli chcesz płynne przewijanie, użyj 'smooth', w przeciwnym razie użyj 'auto' lub zostaw puste
+            behavior: 'smooth' 
           });
         });
       });
   
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navCheck = document.getElementById('nav-check');
+        const navLinks = document.querySelectorAll('header .nav-links a');
+        const body = document.body;
+    
+
+        function toggleMenu() {
+          if (navCheck.checked) {
+            body.classList.add('no-scroll'); 
+          } else {
+            body.classList.remove('no-scroll'); 
+          }
+        }
+    
+
+        navCheck.addEventListener('change', toggleMenu);
+    
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navCheck.checked = false; 
+          });
+        });
+    
+        toggleMenu();
+      });
     </script>
   </body>
 </html>
