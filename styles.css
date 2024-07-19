@@ -9,7 +9,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color:  #b77ae9;
+  background-color:  var(--primary-color);
   color: rgb(32, 32, 32);
   width: 50px;
   height: 50px;
@@ -128,7 +128,7 @@ body.dark-mode {
 /* Define custom color variables */
 :root {
   --header-color: #ffffff;
-  --primary-color: #b77ae9;
+  --primary-color: #fbff00;
   --neutral-black: #0a0a0a;
   --neutral-light-black: #1a1a1a;
   --neutral-dark-gray: #212121;
@@ -142,7 +142,7 @@ body.dark-mode {
   --navlink:#ffffff;
   --buttonsocial-light:#757575;
   --buttonsocial-dark:#212121;
-  --buttonfill:#b77ae9;
+  --buttonfill: var(--primary-color);
   --project-color-one: #000000;
   --project-color-two:#ffffff;
 }

@@ -12,6 +12,7 @@
     >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
+    
   </head>
 
   <body>
@@ -580,83 +581,8 @@
     </main>
 
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-      const modeSwitch = document.getElementById('mode-switch');
-      const body = document.body;
-
-      // Sprawdź aktualny stan trybu przy ładowaniu strony
-      if (body.classList.contains('light-mode')) {
-        body.classList.add('light-mode');
-        body.classList.remove('dark-mode');
-      } else {
-        body.classList.add('dark-mode');
-        body.classList.remove('light-mode');
-      }
-
-      modeSwitch.addEventListener('click', () => {
-        if (body.classList.contains('light-mode')) {
-          body.classList.remove('light-mode');
-          body.classList.add('dark-mode');
-        } else {
-          body.classList.remove('dark-mode');
-          body.classList.add('light-mode');
-        }
-      });
-    });
-
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const scrollUpBtn = document.getElementById('scrollUpBtn');
-      
-        // Pokaż przycisk scroll up, gdy użytkownik przewinie stronę w dół
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 200) { // Możesz dostosować wartość, aby przycisk pokazywał się po przewinięciu strony na odpowiednią odległość
-            scrollUpBtn.classList.add('show');
-          } else {
-            scrollUpBtn.classList.remove('show');
-          }
-        });
-      
-        // Przewiń stronę do góry po kliknięciu przycisku scroll up
-        scrollUpBtn.addEventListener('click', function() {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth' 
-          });
-        });
-      });
-  
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navCheck = document.getElementById('nav-check');
-        const navLinks = document.querySelectorAll('header .nav-links a');
-        const body = document.body;
-    
-
-        function toggleMenu() {
-          if (navCheck.checked) {
-            body.classList.add('no-scroll'); 
-          } else {
-            body.classList.remove('no-scroll'); 
-          }
-        }
-    
-
-        navCheck.addEventListener('change', toggleMenu);
-    
-
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            navCheck.checked = false; 
-          });
-        });
-    
-        toggleMenu();
-      });
-    </script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/dark-light.js" defer></script>
+    <script src="js/burger.js" defer></script>
   </body>
 </html>
