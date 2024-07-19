@@ -892,7 +892,7 @@ header #nav-check {
     position: fixed;
     top: 0;
     width: 100%;
-    /* background-color: var(--neutral-black); */
+    background-color: var(--neutral-dark-gray);
   }
 
   /* Adjust position of nav-title for smaller screens */
