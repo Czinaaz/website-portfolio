@@ -62,49 +62,51 @@
   align-items: center;
 }
 
-.switch {
-  display: none; /* Ukryj standardowy checkbox */
-}
-
-.mode-switch-label {
+.mode-switch-btn {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
   background-color: #ccc;
   border-radius: 20px;
-  transition: background-color 0.3s;
+  border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0;
 }
 
-.mode-switch-label .fa-sun, 
-.mode-switch-label .fa-moon {
+.mode-switch-btn .fa-sun, 
+.mode-switch-btn .fa-moon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: opacity 0.3s;
 }
 
-.mode-switch-label .fa-sun {
+.mode-switch-btn .fa-sun {
   left: 8px;
   opacity: 1;
   color: #000000;
 }
 
-.mode-switch-label .fa-moon {
+.mode-switch-btn .fa-moon {
   right: 8px;
   opacity: 0;
 }
 
-.switch:checked + .mode-switch-label {
+body.dark-mode .mode-switch-btn {
   background-color: var(--primary-color);
 }
 
-.switch:checked + .mode-switch-label .fa-sun {
+body.light-mode .mode-switch-btn {
+  background-color: #ccc;
+}
+
+body.dark-mode .mode-switch-btn .fa-sun {
   opacity: 0;
 }
 
-.switch:checked + .mode-switch-label .fa-moon {
+body.dark-mode .mode-switch-btn .fa-moon {
   opacity: 1;
 }
 
