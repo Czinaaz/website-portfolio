@@ -42,26 +42,6 @@
   color: black;
 }
 
-.light-mode {
-  --primary-color: #b77ae9;
-  --neutral-black: #272727;
-  --neutral-light-black: #c7c7c7;
-  --neutral-dark-gray: #ffffff;
-  --neutral-gray: #191919;
-  --neutral-light-gray: #484848;
-  --neutral-white: #b77ae9;
-  --neutral-offwhite: #444444;
-  --error-red: #e74c3c;
-  --success-green: #2ecc71;
-  --header-color: #1f1f1f;
-  --buttonmain:#ffffff;
-  --navlink:#000000;
-  --buttonsocial-light:#b77ae9;
-  --buttonsocial-dark:#8d8d8d;
-  --buttonfill:hsl(276, 7%, 15%);
-  --project-color-one: #b77ae9;
-  --project-color-two:#ffffff;
-}
 
 .mode-switcher {
   display: flex;
@@ -125,6 +105,29 @@ body.dark-mode {
 }
 
 
+.light-mode {
+  --primary-color: #b77ae9;
+  --neutral-black: #272727;
+  --neutral-light-black: #c7c7c7;
+  --neutral-dark-gray: #ffffff;
+  --neutral-gray: #191919;
+  --neutral-light-gray: #484848;
+  --neutral-white: #b77ae9;
+  --neutral-offwhite: #444444;
+  --error-red: #e74c3c;
+  --success-green: #2ecc71;
+  --header-color: #1f1f1f;
+  --buttonmain:#ffffff;
+  --navlink:#000000;
+  --buttonsocial-light:#b77ae9;
+  --buttonsocial-dark:#8d8d8d;
+  --buttonfill:hsl(276, 7%, 15%);
+  --project-color-one: #b77ae9;
+  --project-color-two:#ffffff;
+  --textarea: #f0f0f0;
+}
+
+
 /* Define custom color variables */
 :root {
   --header-color: #ffffff;
@@ -132,7 +135,7 @@ body.dark-mode {
   --neutral-black: #0a0a0a;
   --neutral-light-black: #1a1a1a;
   --neutral-dark-gray: #212121;
-  --neutral-gray: #333;
+  --neutral-gray: #3d3d3d;
   --neutral-light-gray: #757575;
   --neutral-white: #ffffff;
   --neutral-offwhite: #c7c7c7;
@@ -145,6 +148,7 @@ body.dark-mode {
   --buttonfill: var(--primary-color);
   --project-color-one: #000000;
   --project-color-two:#ffffff;
+  --textarea: #212121;
 }
 
 /* makes sizing simpler */
@@ -417,7 +421,7 @@ header {
 header .nav-title {
   color: var(--neutral-offwhite);
   font-family: "Bebas Neue", sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1.5;
   letter-spacing: -0.01em;
   z-index: 999;
@@ -438,7 +442,7 @@ header .nav-links nav {
 header .nav-links a {
   text-decoration: none;
   color: var(--navlink);
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.5; /* 150% / 24px */
   opacity: 0.5;
@@ -522,6 +526,109 @@ header #nav-check {
   display: flex;
   gap: 16px;
 }
+
+/*----------------------------------------
+Work Experience 
+----------------------------------------*/
+
+.work-experience-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  gap: 60px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 150px 1fr; 
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeline-date {
+  color: var(--neutral-gray);
+  font-weight: bold;
+  justify-self: end; 
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 141px; 
+  top: 4%;
+  transform: translateY(-50%);
+}
+
+.timeline-content {
+  padding-left: 40px;
+}
+
+.company-name {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.job-position {
+  color: var(--neutral-offwhite);
+  margin-bottom: 8px;
+}
+
+.responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+
+.responsibilities li {
+  margin-bottom: 8px;
+  color: var(--neutral-offwhite);
+}
+
+.responsibilities a {
+  text-decoration: underline;
+  color: var(--neutral-offwhite);
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 146px; 
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--neutral-gray);
+}
+
+
+
+@media (max-width: 768px) {
+  .timeline:before {
+    left: 100px; 
+  }
+  .timeline-dot {
+    left: 95px; 
+  }
+
+  .timeline-content {
+    padding: 2px;
+  }
+  .timeline-item {
+    gap: 4px;
+  }
+}
+
+
 
 /*----------------------------------------
  Projects Styles
@@ -647,6 +754,21 @@ header #nav-check {
   color: var(--primary-color);
 }
 
+@media (max-width: 768px) {
+  .project__card {
+    grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
+  }
+}
+
+.project__action a {
+  transition: background-color 0.3s ease;
+}
+
+.project__action a:hover {
+  background-color: var(--primary-color);
+  color: var(--neutral-black);
+}
+
 /*----------------------------------------
  About section styles
 ----------------------------------------*/
@@ -724,7 +846,7 @@ header #nav-check {
   border: 2px solid transparent;
 }
 .form__input:hover {
-  background-color: var(--neutral-dark-gray);
+  background-color: var(--textarea);
 }
 .form__input:focus,
 .form__input:active,
@@ -746,12 +868,12 @@ header #nav-check {
   border: 2px solid transparent;
 }
 .form__textarea:hover {
-  background-color: var(--neutral-dark-gray);
+  background-color: var(--textarea);
 }
 .form__textarea:focus,
 .form__textarea:active,
 .form__textarea:focus-visible {
-  background-color: var(--neutral-dark-gray);
+  background-color: var(--textarea);
   border: 2px solid var(--primary-color);
 }
 .btn-submit {
@@ -817,6 +939,11 @@ header #nav-check {
   margin-top: 40px;
   display: flex;
   gap: 24px;
+}
+
+
+.qr-code {
+  padding: 20px 0;
 }
 
 /* Media query for responsive design */
@@ -1082,4 +1209,17 @@ header #nav-check {
     display: flex;
     justify-content: center;
   }
+  .qr-code {
+    padding: 10px 0;
+  }
+  .qr-code img {
+    width: 180px;
+  }
 }
+
+
+
+
+
+
+
