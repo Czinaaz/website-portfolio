@@ -131,7 +131,7 @@ body.dark-mode {
 /* Define custom color variables */
 :root {
   --header-color: #ffffff;
-  --primary-color: #e0fb66;
+  --primary-color: #80ffaa;
   --neutral-black: #0a0a0a;
   --neutral-light-black: #1a1a1a;
   --neutral-dark-gray: #212121;
@@ -600,6 +600,11 @@ Work Experience
   color: var(--neutral-offwhite);
 }
 
+.responsibilities a:hover {
+  color: var(--primary-color);
+  background-color: var(--neutral-black);
+}
+
 .timeline:before {
   content: '';
   position: absolute;
@@ -765,8 +770,8 @@ Work Experience
 }
 
 .project__action a:hover {
-  background-color: var(--primary-color);
-  color: var(--neutral-black);
+  color: var(--primary-color);
+  background-color: var(--neutral-black);
 }
 
 /*----------------------------------------
