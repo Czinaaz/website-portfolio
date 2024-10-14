@@ -602,7 +602,7 @@ Work Experience
 
 .responsibilities a:hover {
   color: var(--primary-color);
-  background-color: var(--neutral-black);
+  /* background-color: var(--neutral-black); */
 }
 
 .timeline:before {
@@ -771,7 +771,7 @@ Work Experience
 
 .project__action a:hover {
   color: var(--primary-color);
-  background-color: var(--neutral-black);
+  /* background-color: var(--neutral-black); */
 }
 
 /*----------------------------------------
@@ -856,7 +856,7 @@ Work Experience
 .form__input:focus,
 .form__input:active,
 .form__input:focus-visible {
-  background-color: var(--neutral-dark-gray);
+  background-color: var(--textarea);
   border: 2px solid var(--primary-color);
 }
 
