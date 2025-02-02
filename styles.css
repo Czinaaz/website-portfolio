@@ -576,7 +576,8 @@ Work Experience
 
 .company-name {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  
+  font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
@@ -617,21 +618,7 @@ Work Experience
 
 
 
-@media (max-width: 768px) {
-  .timeline:before {
-    left: 100px; 
-  }
-  .timeline-dot {
-    left: 95px; 
-  }
 
-  .timeline-content {
-    padding: 2px;
-  }
-  .timeline-item {
-    gap: 4px;
-  }
-}
 
 
 
@@ -759,11 +746,6 @@ Work Experience
   color: var(--primary-color);
 }
 
-@media (max-width: 768px) {
-  .project__card {
-    grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
-  }
-}
 
 .project__action a {
   transition: background-color 0.3s ease;
@@ -1065,7 +1047,26 @@ Work Experience
     transform: translate(-50%, 6px);
   }
 
-  
+  /* Timeline Work Experience */
+  .work-experience-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+
+  .timeline:before {
+    left: 100px; 
+  }
+  .timeline-dot {
+    left: 95px; 
+  }
+
+  .timeline-content {
+    padding: 2px;
+  }
+  .timeline-item {
+    gap: 4px;
+  }
 
   /* ------------------ Recheck ------------------------------------------- */
   /* Styles for the navigation links container */
@@ -1219,6 +1220,11 @@ Work Experience
   }
   .qr-code img {
     width: 180px;
+  }
+
+
+  .project__card {
+    grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
   }
 }
 
