@@ -10,7 +10,7 @@ Welcome to my portfolio! This repository contains a collection of my projects, s
 
 Here are some screenshots of my portfolio:
 
-![Screenshot 1](./img/projects/ecommerce.png)
+![Screenshot 1](./img/projects/Wanderpedia_Czinaaz.png)
 
 ![Screenshot 2](./img/projects/cinema.png)
 
