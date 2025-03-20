@@ -127,8 +127,6 @@ body.dark-mode {
   --textarea: #f0f0f0;
 }
 
-
-/* Define custom color variables */
 :root {
   --header-color: #ffffff;
   --primary-color: #80ffaa;
@@ -151,17 +149,16 @@ body.dark-mode {
   --textarea: #212121;
 }
 
-/* makes sizing simpler */
+
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* css reset */
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
+
 
 * {
   margin: 0;
@@ -169,7 +166,7 @@ body.dark-mode {
   font: inherit;
 }
 
-/* min body height */
+
 
 body {
   min-height: 100vh;
@@ -180,7 +177,7 @@ body {
   color: var(--neutral-white);
 }
 
-/* responsive images/videos */
+
 img,
 picture,
 svg,
@@ -211,13 +208,13 @@ video {
   background: var(--neutral-gray);
 }
 
-/* adding space when there are multiple paragraphs */
+
 p + p {
   margin-top: 10px;
 }
 
 /*----------------------------------------
- Typography
+Typography
 ----------------------------------------*/
 .heading-one {
   font-family: "Bebas Neue", sans-serif;
@@ -256,7 +253,7 @@ p + p {
 .text-action {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1; /* 16px or 100% */
+  line-height: 1; 
   text-transform: uppercase;
 }
 .text-underline {
@@ -327,7 +324,7 @@ p + p {
 .btn-primary .btn__dot i.bx-up-arrow-alt {
   rotate: 45deg;
 }
-/* hover style */
+
 .btn-primary:hover {
   background: var(--neutral-white);
 }
@@ -353,7 +350,7 @@ p + p {
   text-decoration: none;
 }
 
-/* Styles for the social icon on hover */
+
 .btn-social:hover {
   background-color: var(--buttonsocial-light);
 }
@@ -372,7 +369,7 @@ p + p {
 .link-primary {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.5; /* 16px or 100% */
+  line-height: 1.5; 
   text-transform: uppercase;
   color: var(--primary-color);
   text-decoration: none;
@@ -417,7 +414,7 @@ header {
   z-index: 999;
 }
 
-/* Styles for the navigation title in the header */
+
 header .nav-title {
   color: var(--neutral-offwhite);
   font-family: "Bebas Neue", sans-serif;
@@ -427,36 +424,36 @@ header .nav-title {
   z-index: 999;
 }
 
-/* Styles for the navigation title button (burger menu) */
+
 header .nav-btn {
   display: none;
 }
 
-/* Styles for navigation links in the header */
+
 header .nav-links nav {
   display: flex;
   gap: 32px;
 }
 
-/* Styles for individual navigation links */
+
 header .nav-links a {
   text-decoration: none;
   color: var(--navlink);
   font-size: 26px;
   font-weight: 500;
-  line-height: 1.5; /* 150% / 24px */
+  line-height: 1.5; 
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
 
-/* Styles for active and hover states of navigation links */
+
 header .nav-links a.active,
 header .nav-links a:hover {
   opacity: 1;
   color: var(--primary-color);
 }
 
-/* Styles for elements related to navigation check and call-to-action button */
+
 header #nav-check {
   display: none;
 }
@@ -464,7 +461,7 @@ header #nav-check {
 /*----------------------------------------
  Hero section style
 ----------------------------------------*/
-/* Styles for the welcome section */
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -474,7 +471,7 @@ header #nav-check {
   padding-bottom: 80px;
 }
 
-/* Styles for the welcome section description */
+
 .hero__content {
   max-width: 544px;
   align-self: center;
@@ -492,7 +489,6 @@ header #nav-check {
 .hero__scroll {
   position: absolute;
   bottom: 0;
-  /* pointer-events: none; */
   height: 28px;
   overflow: hidden;
 }
@@ -521,7 +517,7 @@ header #nav-check {
   margin: auto;
 }
 
-/* Styles for the contact button */
+
 .action-btn-container {
   display: flex;
   gap: 16px;
@@ -603,7 +599,7 @@ Work Experience
 
 .responsibilities a:hover {
   color: var(--primary-color);
-  /* background-color: var(--neutral-black); */
+
 }
 
 .timeline:before {
@@ -647,7 +643,7 @@ Work Experience
 
 .project__card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 24px;
 }
 .project__image__link {
@@ -753,7 +749,6 @@ Work Experience
 
 .project__action a:hover {
   color: var(--primary-color);
-  /* background-color: var(--neutral-black); */
 }
 
 /*----------------------------------------
@@ -763,18 +758,11 @@ Work Experience
   display: flex;
   margin: auto;
   text-align:justify ;
-  /* grid-template-columns: repeat(2, 1fr); Two columns */
   gap: 24px;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-/* .home__about-section__content {
-  max-width: 500px;
-  align-self: center;
-}
-.home__about-section__content__body {
-  margin-bottom: 24px;
-} */
+
 /* .home__about-section__img {
   width: 100%;
   height: auto;
@@ -784,7 +772,7 @@ Work Experience
 /*----------------------------------------
  Contact section styles
 ----------------------------------------*/
-/* Styling the main contact box */
+
 .contact-section {
   display: grid;
   padding-top: 80px;
@@ -935,19 +923,15 @@ Work Experience
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
-  /*--------------------
-  General Layout Style
-  --------------------*/
+
   .container {
     padding: 0 16px;
   }
-  /*--------------------
-  Typography
-  --------------------*/
+
   body {
     font-size: 16px;
     line-height: 1.6;
-    padding-top: 76px; /* padding top the size of header so that it doesn't overlap */
+    padding-top: 76px; 
   }
   .heading-one {
     font-size: 57px;
@@ -1009,28 +993,28 @@ Work Experience
     background-color: var(--neutral-dark-gray);
   }
 
-  /* Adjust position of nav-title for smaller screens */
+
   header .nav-title {
     position: relative;
     font-size: 28px;
-    line-height: 1; /* 28px */
+    line-height: 1; 
     letter-spacing: -0.01em;
   }
 
-  /* Styles for the navigation button (burger menu) */
+
   header .nav-btn {
     display: block;
     position: relative;
   }
-  /* Styles for the label wrapping the burger menu icon */
+
   header .nav-btn label {
     display: block;
     width: 44px;
     height: 44px;
-    cursor: pointer; /* Add cursor:pointer to indicate it's clickable */
+    cursor: pointer; 
   }
 
-  /* Styles for the individual spans representing burger menu lines */
+
   header .nav-btn label span {
     display: block;
     position: absolute;
@@ -1068,7 +1052,7 @@ Work Experience
     gap: 4px;
   }
 
-  /* ------------------ Recheck ------------------------------------------- */
+
   /* Styles for the navigation links container */
   header .nav-links {
     position: absolute;
@@ -1092,11 +1076,11 @@ Work Experience
     align-items: center;
   }
 
-  /* Styles for individual navigation links in smaller screens */
+
   header .nav-links a {
     font-size: 24px;
   }
-  /* Styles for burger-to-X transformation when the navigation is checked */
+
   header #nav-check:checked ~ .nav-btn label span:nth-child(1) {
     transform-origin: center;
     transform: translate(-50%, 0) rotate(-45deg);
@@ -1106,7 +1090,7 @@ Work Experience
     transform-origin: center;
     transform: translate(-50%, 0) rotate(45deg);
   }
-  /* Styles for expanding and collapsing the navigation links */
+
   header #nav-check:not(:checked) ~ .nav-links {
     transform: translateY(-100%);
   }
@@ -1152,7 +1136,7 @@ Work Experience
     gap: 96px;
   }
   .project__card {
-    grid-template-columns: auto; /* Two columns */
+    grid-template-columns: auto; 
     gap: 40px;
   }
   .project__tag {
@@ -1173,8 +1157,7 @@ Work Experience
   ----------------------------------------*/
   .home__about-section {
     display: flex;
-    /* grid-template-columns: auto; Two columns */
-    /* gap: 64px; */
+
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -1185,7 +1168,7 @@ Work Experience
   /*----------------------------------------
   Contact section styles
   ----------------------------------------*/
-  /* Styling the main contact box */
+
   .contact-section {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -1224,7 +1207,7 @@ Work Experience
 
 
   .project__card {
-    grid-template-columns: 1fr; /* Zmiana na jedną kolumnę */
+    grid-template-columns: 1fr; 
   }
 }
 
