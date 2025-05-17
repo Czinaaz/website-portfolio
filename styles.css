@@ -1,4 +1,4 @@
-/* Import the Bebas+Neue and Inter fonts from Google Fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap");
 
 .no-scroll {
@@ -57,7 +57,7 @@
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   padding: 0;
 }
 
@@ -67,6 +67,7 @@
   top: 50%;
   transform: translateY(-50%);
   transition: opacity 0.3s;
+  
 }
 
 .mode-switch-btn .fa-sun {
@@ -86,7 +87,7 @@ body.dark-mode .mode-switch-btn {
 }
 
 body.light-mode .mode-switch-btn {
-  background-color: #ccc;
+  background-color: #b77ae9;
 }
 
 body.dark-mode .mode-switch-btn .fa-sun {
@@ -97,8 +98,6 @@ body.dark-mode .mode-switch-btn .fa-moon {
   opacity: 1;
 }
 
-
-Tryb ciemny
 body.dark-mode {
   background-color: var(--neutral-black);
   color: var(--neutral-white);
@@ -121,10 +120,11 @@ body.dark-mode {
   --navlink:#000000;
   --buttonsocial-light:#b77ae9;
   --buttonsocial-dark:#8d8d8d;
-  --buttonfill:hsl(276, 7%, 15%);
+  --buttonfill:#000000;
   --project-color-one: #b77ae9;
   --project-color-two:#ffffff;
   --textarea: #f0f0f0;
+  --buttonfill-hover: #000000;
 }
 
 :root {
@@ -141,12 +141,13 @@ body.dark-mode {
   --success-green: #2ecc71;
   --buttonmain:#212121;
   --navlink:#ffffff;
-  --buttonsocial-light:#757575;
   --buttonsocial-dark:#212121;
   --buttonfill: var(--primary-color);
   --project-color-one: #000000;
   --project-color-two:#ffffff;
   --textarea: #212121;
+  --buttonfill-hover: var(--primary-color);
+  --buttonsocial-light:#757575a7;
 }
 
 
@@ -353,6 +354,7 @@ Typography
 
 .btn-social:hover {
   background-color: var(--buttonsocial-light);
+  color: var(--buttonfill-hover);
 }
 
 .social-icons {
@@ -467,8 +469,8 @@ header #nav-check {
   justify-content: space-between;
   align-items: stretch;
   gap: 24px;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 
@@ -510,7 +512,7 @@ header #nav-check {
 
 .hero__img {
   border-radius: 16px;
-  width: 80%;
+  width: 70%;
   height: auto;
   flex-shrink: 0;
   object-fit: cover;
@@ -573,13 +575,19 @@ Work Experience
 .company-name {
   color: var(--primary-color);
   
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 8px;
 }
 
 .job-position {
   color: var(--neutral-offwhite);
   margin-bottom: 8px;
+}
+
+strong {
+  font-weight: 800;
+  font-style:inherit;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .responsibilities {
@@ -599,7 +607,6 @@ Work Experience
 
 .responsibilities a:hover {
   color: var(--primary-color);
-
 }
 
 .timeline:before {
@@ -1116,6 +1123,10 @@ Work Experience
   }
   .hero__scroll {
     display: none;
+  }
+
+  .hero__img {
+    width: 80%;
   }
 
   /*--------------------

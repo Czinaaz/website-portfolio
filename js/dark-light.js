@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modeSwitch = document.getElementById('mode-switch');
     const body = document.body;
     
+    var col=document.getElementById("sun");
+    col.style.color="black";
     
     if (body.classList.contains('light-mode')) {
       body.classList.add('light-mode');
