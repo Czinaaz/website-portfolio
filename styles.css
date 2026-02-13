@@ -542,6 +542,15 @@ Work Experience
   padding-bottom: 20px;
   gap: 60px;
 }
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 146px; 
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--neutral-gray);
+}
 
 .timeline-item {
   display: grid;
@@ -552,9 +561,11 @@ Work Experience
 }
 
 .timeline-date {
+  margin-left: 5%;
   color: var(--neutral-gray);
   font-weight: bold;
-  justify-self: end; 
+  justify-self: end;
+  
 }
 
 .timeline-dot {
@@ -591,8 +602,17 @@ strong {
 }
 
 .responsibilities {
-  list-style: none;
-  padding-left: 0;
+  list-style: none; 
+  padding-left: 1.2em; 
+}
+
+.responsibilities li::before {
+  content: "•";       /* symbol bullet */
+  color: var(--primary-color);     /* Twój kolor, np. złoty */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;         /* szerokość pseudo-elementu */
+  margin-left: -1em;  /* wcięcie, żeby bullet był przy tekście */
 }
 
 .responsibilities li {
@@ -609,15 +629,6 @@ strong {
   color: var(--primary-color);
 }
 
-.timeline:before {
-  content: '';
-  position: absolute;
-  left: 146px; 
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--neutral-gray);
-}
 
 
 
@@ -1044,20 +1055,33 @@ strong {
     padding-bottom: 80px;
   }
 
-
-  .timeline:before {
-    left: 100px; 
+  .timeline {
+    padding-left: 40px; /* mniejsza odległość po lewej */
   }
+
+  .timeline::before {
+    left: 20px; /* linia bliżej lewej krawędzi */
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr; /* jedna kolumna */
+    gap: 10px;
+  }
+
+  .timeline-date {
+    justify-self: start;
+  }
+
   .timeline-dot {
-    left: 95px; 
+    left: -25px;
+    top: 1.5%;
+    transform: translateY(0);
   }
 
   .timeline-content {
-    padding: 2px;
+    padding-left: 0;
   }
-  .timeline-item {
-    gap: 4px;
-  }
+
 
 
   /* Styles for the navigation links container */
@@ -1129,6 +1153,7 @@ strong {
     width: 80%;
   }
 
+  
   /*--------------------
   Projects Styles
   --------------------*/
